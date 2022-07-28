@@ -1,0 +1,259 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header */
+
+header{
+    height: 77px;
+    background: white;
+    padding: 0 50px;
+    color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    text-transform: uppercase;
+    color: brown;
+    font-weight: 200;
+    display: flex;
+}
+
+.menu a{
+    color: brown;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: white;
+}
+
+#check{
+    display: none;
+}
+
+/* banner */
+#banner{
+   width: 100%;
+   max-width: 1440px;
+   padding: 0 50px;
+   background-image: url(./imagenes/6_6_2022_VALENTI_avances-banner-1_V1\ 1.png);
+   height: 108vh;
+   background-size: cover;
+   background-position: center;
+}
+/* texto */
+#texto{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    background-image: url(./imagenes/cuadro\ fondo.png);
+    height: 72vh;
+    background-size: cover;
+    background-position: center;
+}
+p{
+    color: #FFEC00;
+    font-size: 40px;
+    text-align: center;
+}
+.p-color{
+    color: #FFFFFF;
+    font-size: 25px;
+    text-align: center;
+}
+.contenido-texto{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* locales */
+
+.img{
+    position: absolute;
+    width: 1084px;
+    height: 581px;
+    left: 196px;
+    top: 1178px;
+}
+.p-colorI{
+    color: #E14925;
+    font-size: 40px;
+    text-align: center;
+}
+.p-colorII{
+    color: #000000;
+    font-size: 17px;
+    text-align: center;
+}
+.contenido-textoI{
+    position: absolute;
+    width: 908px;
+    height: 45px;
+    left: 266px;
+    top: 2286px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #E14925;
+}
+
+/* conteiner */
+
+#container{
+    background-color: #FFFFFF;
+    margin: auto;
+    width: 90%;
+    max-width: 400 px;
+    padding: 4.5em 3em;
+    text-align: center;
+}
+.form{
+    background-color: #FFFFFF;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0,0,0 / 30%);
+    text-align: center;
+}
+.form-title{
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+.form-paragraph{
+    font-weight: 300;
+}
+.form-link{
+    font-weight: 400;
+    color: #000000;
+}
+.form-container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em
+}
+.form-group{
+    position: relative;
+    --color: #0088AA; 
+}
+
+.form-input{
+    width: 100%;
+    background: none;
+    color: #0088AA;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Poppins', sans-serif;
+}
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #0088AA;
+}
+.form-label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform 0.5s, color .3s;
+}
+
+.form-submit{
+    background-color: #D7033E;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: none;
+    position: absolute;
+    width: 200px;
+    height: 41px;
+    left: 620px;
+    top: 2800px;}
+.form-line{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0088AA;
+    transform: scale(0);
+    transform: left bottom;
+    transition: tranform .4s;
+}
+
+/* responsive */
+
+@media(max-width: 768px){
+    /* header */
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
